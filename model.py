@@ -44,11 +44,11 @@ while True:
 
 
         if len(obj_hist[obj_id]) > 1:
-            t1, x1c, y1c = obj_hist[obj_id][-2]
-            t2, x2c, y2c = obj_hist[obj_id][-1]
+            time1, x1center, y1center = obj_hist[obj_id][-2]
+            time2, x2center, y2center = obj_hist[obj_id][-1]
 
-            dist = compute_distance(x1c, y1c, x2c, y2c)
-            speed = compute_speed(dist, t1, t2)
+            dist = compute_distance(x1center, y1center, x2center, y2center)
+            speed = compute_speed(dist, time1, time2)
 
         label = f"{results.names[int(b.cls[0])]} ID:{obj_id} Speed:{int(speed)}px/s"
 
